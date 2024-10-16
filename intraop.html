@@ -5,29 +5,57 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
+
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
+            <div class="container">
                 <a class="navbar-brand" href="#">
-                    <img src="img/logo.png" alt="Logo" width="180" height="50" class="d-inline-block align-text-top">
+                    <img src="img/logo.png" alt="Logo" width="200" height="50" class="d-inline-block align-text-top">
                 </a>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNav"></div>
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="intraop.html">Intraoperatório</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="posop.html">Pós-operatório</a>
-                    </li>
-                </ul>
-            </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarColor03">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home
+                                <span class="visually-hidden">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pré Consulta</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Teleconsulta</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Intraoperatorio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pós-operatório</a>
+                        </li>
+                        <!--
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Separated link</a>
+                                </div>
+                            </li>
+                            -->
+                    </ul>
+                    <form class="d-flex">
+                        <a class="btn btn-secondary me-2" href="contato.html">Contato</a>
+                        <button class="btn btn-secondary" type="submit">Version 1.0.0</button>
+                    </form>
+                </div>
             </div>
         </nav>
     </header>
@@ -54,7 +82,7 @@
                         <!-- Modo de Entrada -->
                         <div class="row mt-3">
                             <div class="col-sm-6">
-                                <label class="form-label form-label-sm">Modo de Entrada</label>
+                                <label class="form-label form-label-sm">Auxiliado em entrada do paciente em sala operatória</label>
                                 <div class="d-flex">
                                     <div class="form-check form-check-inline form-check-sm">
                                         <input class="form-check-input" type="checkbox" name="entrada" id="maca" value="maca">
@@ -101,30 +129,90 @@
                         <div class="row mt-3">
                             <div class="col-sm-12">
                                 <label class="form-label form-label-sm">Posicionamento na Mesa Cirúrgica</label>
-                                <div class="row">
-                                    <div class="col-3">
-                                        <select class="form-select form-select-sm">
-                                            <option value="dorsal">Dorsal</option>
-                                            <option value="ventral">Ventral</option>
-                                            <option value="lateralD">Lateral D</option>
-                                            <option value="lateralE">Lateral E</option>
-                                            <option value="litotomica">Litotômica</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-9">
-                                        <input type="text" class="form-control form-control-sm" placeholder="Especificar se outro">
-                                    </div>
+                                <div class="d-flex flex-wrap"></div>
+                                <div class="form-check form-check-inline form-check-sm">
+                                    <input class="form-check-input" type="checkbox" name="posicionamento" id="dorsal" value="dorsal">
+                                    <label class="form-check-label" for="dorsal">Dorsal</label>
+                                </div>
+                                <div class="form-check form-check-inline form-check-sm">
+                                    <input class="form-check-input" type="checkbox" name="posicionamento" id="ventral" value="ventral">
+                                    <label class="form-check-label" for="ventral">Ventral</label>
+                                </div>
+                                <div class="form-check form-check-inline form-check-sm">
+                                    <input class="form-check-input" type="checkbox" name="posicionamento" id="lateralD" value="lateralD">
+                                    <label class="form-check-label" for="lateralD">Lateral D</label>
+                                </div>
+                                <div class="form-check form-check-inline form-check-sm">
+                                    <input class="form-check-input" type="checkbox" name="posicionamento" id="lateralE" value="lateralE">
+                                    <label class="form-check-label" for="lateralE">Lateral E</label>
+                                </div>
+                                <div class="form-check form-check-inline form-check-sm">
+                                    <input class="form-check-input" type="checkbox" name="posicionamento" id="litotomica" value="litotomica">
+                                    <label class="form-check-label" for="litotomica">Litotômica</label>
+                                </div>
+                                <div class="form-check form-check-inline form-check-sm">
+                                    <input class="form-check-input" type="checkbox" name="posicionamento" id="fowler" value="fowler">
+                                    <label class="form-check-label" for="fowler">Fowler</label>
+                                </div>
+                                <div class="form-check form-check-inline form-check-sm">
+                                    <input class="form-check-input" type="checkbox" name="posicionamento" id="proclive" value="proclive">
+                                    <label class="form-check-label" for="proclive">Proclive</label>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-12">
+                                    <input type="text" class="form-control form-control-sm" placeholder="Especificar se outro">
                                 </div>
                             </div>
                         </div>
+
 
                         <!-- Utilização de Mecanismos de Proteção -->
                         <div class="row mt-3">
                             <div class="col-sm-12">
                                 <label class="form-label form-label-sm">Utilização de Mecanismos de Proteção no Posicionamento</label>
-                                <input type="text" class="form-control form-control-sm" placeholder="Especificar locais">
+                                <div class="d-flex">
+                                    <div class="form-check form-check-inline form-check-sm">
+                                        <input class="form-check-input" type="checkbox" name="mecanismosProtecao" id="simMecanismos" value="sim" onclick="toggleLocais(this.checked)">
+                                        <label class="form-check-label" for="simMecanismos">Sim</label>
+                                    </div>
+                                    <div class="form-check form-check-inline form-check-sm">
+                                        <input class="form-check-input" type="checkbox" name="mecanismosProtecao" id="naoAplicaMecanismos" value="naoSeAplica" onclick="toggleLocais(!this.checked)">
+                                        <label class="form-check-label" for="naoAplicaMecanismos">Não se aplica</label>
+                                    </div>
+                                </div>
+                                <div id="locaisProtecao" style="display: none; margin-top: 10px;">
+                                    <div class="form-check form-check-inline form-check-sm">
+                                        <input class="form-check-input" type="checkbox" name="locais" id="sobJoelhos" value="sobJoelhos">
+                                        <label class="form-check-label" for="sobJoelhos">Sob joelhos</label>
+                                    </div>
+                                    <div class="form-check form-check-inline form-check-sm">
+                                        <input class="form-check-input" type="checkbox" name="locais" id="sobPanturrilha" value="sobPanturrilha">
+                                        <label class="form-check-label" for="sobPanturrilha">Sob panturrilha</label>
+                                    </div>
+                                    <div class="form-check form-check-inline form-check-sm">
+                                        <input class="form-check-input" type="checkbox" name="locais" id="sobCabeca" value="sobCabeca">
+                                        <label class="form-check-label" for="sobCabeca">Sob cabeça</label>
+                                    </div>
+                                    <div class="form-check form-check-inline form-check-sm">
+                                        <input class="form-check-input" type="checkbox" name="locais" id="outrosLocais" value="outros">
+                                        <label class="form-check-label" for="outrosLocais">Outros:</label>
+                                    </div>
+                                    <input type="text" class="form-control form-control-sm mt-2" placeholder="Especificar locais">
+                                </div>
                             </div>
                         </div>
+
+                        <script>
+                            function toggleLocais(show) {
+                                const locaisProtecao = document.getElementById('locaisProtecao');
+                                if (show) {
+                                    locaisProtecao.style.display = 'block';
+                                } else {
+                                    locaisProtecao.style.display = 'none';
+                                }
+                            }
+                        </script>
 
                         <!-- Utilização de Bandagem de Contenção -->
                         <div class="row mt-3">
@@ -134,6 +222,10 @@
                                     <div class="form-check form-check-inline form-check-sm">
                                         <input class="form-check-input" type="checkbox" name="bandagem" id="simBandagem" value="sim">
                                         <label class="form-check-label" for="simBandagem">Sim</label>
+                                    </div>
+                                    <div class="form-check form-check-inline form-check-sm">
+                                        <input class="form-check-input" type="checkbox" name="bandagem" id="naoBandagem" value="nao">
+                                        <label class="form-check-label" for="naoBandagem">Não</label>
                                     </div>
                                     <div class="form-check form-check-inline form-check-sm">
                                         <input class="form-check-input" type="checkbox" name="bandagem" id="naoAplicaBandagem" value="naoSeAplica">
@@ -148,11 +240,15 @@
                                 <label class="form-label form-label-sm">Mantido alarme sonoro do dispositivo de eletrocautério em volume audível</label>
                                 <div class="d-flex">
                                     <div class="form-check form-check-inline form-check-sm">
-                                        <input class="form-check-input" type="checkbox" name="alarmeEletrocauterio" id="simAlarme" value="sim">
+                                        <input class="form-check-input" type="radio" name="alarmeEletrocauterio" id="simAlarme" value="sim">
                                         <label class="form-check-label" for="simAlarme">Sim</label>
                                     </div>
                                     <div class="form-check form-check-inline form-check-sm">
-                                        <input class="form-check-input" type="checkbox" name="alarmeEletrocauterio" id="naoAplicaAlarme" value="naoSeAplica">
+                                        <input class="form-check-input" type="radio" name="alarmeEletrocauterio" id="naoAlarme" value="nao">
+                                        <label class="form-check-label" for="naoAlarme">Não</label>
+                                    </div>
+                                    <div class="form-check form-check-inline form-check-sm">
+                                        <input class="form-check-input" type="radio" name="alarmeEletrocauterio" id="naoAplicaAlarme" value="naoSeAplica">
                                         <label class="form-check-label" for="naoAplicaAlarme">Não se aplica</label>
                                     </div>
                                 </div>
@@ -180,6 +276,10 @@
                                         <label class="form-check-label" for="coxaDireita">Coxa direita</label>
                                     </div>
                                     <div class="form-check form-check-inline form-check-sm">
+                                        <input class="form-check-input" type="checkbox" name="placaNeutra" id="naoAplicaPlacaNeutra" value="naoSeAplica">
+                                        <label class="form-check-label" for="naoAplicaPlacaNeutra">Não se aplica</label>
+                                    </div>
+                                    <div class="form-check form-check-inline form-check-sm">
                                         <input class="form-check-input" type="checkbox" name="placaNeutra" id="outros" value="outros">
                                         <label class="form-check-label" for="outros">Outros:</label>
                                     </div>
@@ -199,11 +299,15 @@
                                 <label class="form-label form-label-sm">Utilizado Manta térmica</label>
                                 <div class="d-flex">
                                     <div class="form-check form-check-inline form-check-sm">
-                                        <input class="form-check-input" type="checkbox" name="mantaTermica" id="simManta" value="sim">
+                                        <input class="form-check-input" type="radio" name="mantaTermica" id="simManta" value="sim">
                                         <label class="form-check-label" for="simManta">Sim</label>
                                     </div>
                                     <div class="form-check form-check-inline form-check-sm">
-                                        <input class="form-check-input" type="checkbox" name="mantaTermica" id="naoAplicaManta" value="naoSeAplica">
+                                        <input class="form-check-input" type="radio" name="mantaTermica" id="naoManta" value="nao">
+                                        <label class="form-check-label" for="naoManta">Não</label>
+                                    </div>
+                                    <div class="form-check form-check-inline form-check-sm">
+                                        <input class="form-check-input" type="radio" name="mantaTermica" id="naoAplicaManta" value="naoSeAplica">
                                         <label class="form-check-label" for="naoAplicaManta">Não se aplica</label>
                                     </div>
                                 </div>
@@ -231,16 +335,28 @@
                             <div class="col-sm-12">
                                 <label class="form-label form-label-sm">Produto para Anti-sepsia</label>
                                 <div class="row">
-                                    <div class="col-3">
-                                        <select class="form-select form-select-sm">
-                                            <option value="clorexidinaDegermante">Clorexidina Degermante</option>
-                                            <option value="clorexidinaAlcoolica">Clorexidina Alcoólica</option>
-                                            <option value="outro">Outro (especificar)</option>
-                                        </select>
+                                    <div class="col-12">
+                                        <div class="form-check form-check-inline form-check-sm">
+                                            <input class="form-check-input" type="checkbox" name="antisepsia" id="clorexidinaDegermante" value="clorexidinaDegermante">
+                                            <label class="form-check-label" for="clorexidinaDegermante">Clorexidina Degermante</label>
+                                        </div>
+                                        <div class="form-check form-check-inline form-check-sm">
+                                            <input class="form-check-input" type="checkbox" name="antisepsia" id="clorexidinaAlcoolica" value="clorexidinaAlcoolica">
+                                            <label class="form-check-label" for="clorexidinaAlcoolica">Clorexidina Alcoólica</label>
+                                        </div>
+                                        <div class="form-check form-check-inline form-check-sm">
+                                            <input class="form-check-input" type="checkbox" name="antisepsia" id="pvpi" value="pvpi">
+                                            <label class="form-check-label" for="pvpi">PVPI</label>
+                                        </div>
+
                                     </div>
-                                    <div class="col-9">
-                                        <input type="text" class="form-control form-control-sm" placeholder="Especificar se outro">
-                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class=" col-sm-12">
+                                <div class="col-9">
+                                    <input type="text" class="form-control form-control-sm" placeholder="Especificar se outro">
                                 </div>
                             </div>
                         </div>
@@ -388,6 +504,24 @@
                                 </div>
                             </div>
 
+                            <!-- Button Copiar Anotação -->
+                            <div class="row mt-3">
+                                <div class="col-sm-12">
+                                    <button type="button" class="btn btn-success" onclick="copiarAnotacao()">Copiar Anotação</button>
+                                </div>
+                            </div>
+
+                            <script>
+                                function copiarAnotacao() {
+                                    const anotacao = document.querySelector('textarea').value;
+                                    navigator.clipboard.writeText(anotacao).then(() => {
+                                        alert('Anotação copiada para a área de transferência!');
+                                    }).catch(err => {
+                                        alert('Erro ao copiar anotação: ' + err);
+                                    });
+                                }
+                            </script>
+
                             <br>
                             <br><br>
                             <br><br>
@@ -396,6 +530,7 @@
                             <hr>
 
                     </form>
+
                 </div>
 
             </form>
