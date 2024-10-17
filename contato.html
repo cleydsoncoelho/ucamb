@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale Conosco</title>
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1>Fale Conosco</h1>
+        <p>Se você tiver alguma sugestão ou encontrou algum erro, por favor, nos avise preenchendo o formulário abaixo.</p>
+        <form action="mailto:cleidsoncorel@gmail.com" method="post" enctype="text/plain">
+            <div class="row mt-3">
+                <div class="form-group col-md-12">
+                    <label for="name">Nome</label>
+                    <input type="text" class="form-control form-control-sm" id="name" name="name" placeholder="Digite seu nome" required>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="form-group col-md-6">
+                    <label for="department">Setor</label>
+                    <select class="form-control form-control-sm" id="department" name="department" required>
+                        <option value="">Selecione o setor</option>
+                        <option value="suporte">Suporte</option>
+                        <option value="vendas">Vendas</option>
+                        <option value="financeiro">Financeiro</option>
+                        <option value="outros">Outros</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="formName">Nome do Formulário</label>
+                    <input type="text" class="form-control form-control-sm" id="formName" name="formName" placeholder="Digite o nome do formulário" required>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="form-group mb-3">
+                    <label for="message">Mensagem</label>
+                    <textarea class="form-control form-control-sm" id="message" name="message" rows="10" placeholder="Digite sua mensagem" required></textarea>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+
+        <!-- Bootstrap JS e dependências -->
+        <script src=" https://code.jquery.com/jquery-3.5.1.slim.min.js">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
