@@ -66,7 +66,7 @@
             <div class="container mt-5">
                 <div class="row mt-3">
                     <div class="col-md-12">
-                        <label for="dataCirurgia" class="form-label">Data prevista para a cirurgia:</label>
+                        <label for="dataCirurgia" class="form-label fw-bold">Data prevista para a cirurgia:</label>
                         <div class="col-2">
                             <input type="date" class="form-control form-control-sm" id="dataCirurgia" name="dataCirurgia" />
                         </div>
@@ -75,19 +75,19 @@
                 <div class="mt-5">
                     <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="funcao-papel-tab" data-bs-toggle="tab" data-bs-target="#funcao-papel" type="button" role="tab" aria-controls="funcao-papel" aria-selected="true">MODO FUNÇÃO DO PAPEL</button>
+                            <button class="nav-link active fw-bold" id="funcao-papel-tab" data-bs-toggle="tab" data-bs-target="#funcao-papel" type="button" role="tab" aria-controls="funcao-papel" aria-selected="true">MODO FUNÇÃO DO PAPEL</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="interdependencia-tab" data-bs-toggle="tab" data-bs-target="#interdependencia" type="button" role="tab" aria-controls="interdependencia" aria-selected="false">MODO INTERDEPENDÊNCIA</button>
+                            <button class="nav-link fw-bold" id="interdependencia-tab" data-bs-toggle="tab" data-bs-target="#interdependencia" type="button" role="tab" aria-controls="interdependencia" aria-selected="false">MODO INTERDEPENDÊNCIA</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="autoconceito-tab" data-bs-toggle="tab" data-bs-target="#autoconceito" type="button" role="tab" aria-controls="autoconceito" aria-selected="false">MODO AUTOCONCEITO</button>
+                            <button class="nav-link fw-bold" id="autoconceito-tab" data-bs-toggle="tab" data-bs-target="#autoconceito" type="button" role="tab" aria-controls="autoconceito" aria-selected="false">MODO AUTOCONCEITO</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="fisiologico-tab" data-bs-toggle="tab" data-bs-target="#fisiologico" type="button" role="tab" aria-controls="fisiologico" aria-selected="false">MODO FISIOLÓGICO</button>
+                            <button class="nav-link fw-bold" id="fisiologico-tab" data-bs-toggle="tab" data-bs-target="#fisiologico" type="button" role="tab" aria-controls="fisiologico" aria-selected="false">MODO FISIOLÓGICO</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="diagnosticos-tab" data-bs-toggle="tab" data-bs-target="#diagnosticos" type="button" role="tab" aria-controls="diagnosticos" aria-selected="false">DIAGNÓSTICOS/METAS/INTERVENÇÕES</button>
+                            <button class="nav-link fw-bold" id="diagnosticos-tab" data-bs-toggle="tab" data-bs-target="#diagnosticos" type="button" role="tab" aria-controls="diagnosticos" aria-selected="false">DIAGNÓSTICOS/METAS/INTERVENÇÕES</button>
                         </li>
                     </ul>
                 </div>
@@ -99,7 +99,7 @@
                             <div class="row mt-3">
                                 <!-- Procedência -->
                                 <div class="col-md-12">
-                                    <label for="procedencia" class="form-label">Procedência:</label><br />
+                                    <label for="procedencia" class="form-label fw-bold">Procedência:</label><br />
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="checkbox" id="procedenciaResidencia" name="procedencia" value="Residência" />
                                         <label class="form-check-label" for="procedenciaResidencia">Residência</label>
@@ -129,7 +129,7 @@
                             <!-- Gênero -->
                             <div class="row mt-3">
                                 <div class="col-md-12">
-                                    <label class="form-label">Gênero:</label><br />
+                                    <label class="form-label fw-bold">Gênero:</label><br />
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" id="mulherCisgenero" name="genero" value="Mulher Cisgênero" />
                                         <label class="form-check-label" for="mulherCisgenero">Mulher Cisgênero</label>
@@ -172,7 +172,7 @@
                             <!-- Pessoa com Deficiência -->
                             <div class="row mt-3">
                                 <div class="col-md-12">
-                                    <label class="form-label">Pessoa com deficiência:</label><br />
+                                    <label class="form-label fw-bold">Pessoa com deficiência:</label><br />
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" id="deficienciaSim" name="deficiencia" value="Sim" onclick="toggleDescricaoDeficiencia(this)" />
                                         <label class="form-check-label" for="deficienciaSim">Sim</label>
@@ -199,7 +199,7 @@
                             <div class="row mt-3">
                                 <!-- Coluna de tamanho 12 para Situação Empregatícia -->
                                 <div class="col-md-12">
-                                    <label class="form-label">Situação empregatícia:</label><br />
+                                    <label class="form-label fw-bold">Situação empregatícia:</label><br />
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="checkbox" id="empregadoAutonomo" name="empregadoAutonomo" value="Empregado autônomo" />
                                         <label class="form-check-label" for="empregadoAutonomo">Empregado autônomo</label>
@@ -246,23 +246,23 @@
                             <div class="row mt-3">
                                 <!-- Coluna de tamanho 6 para Nome do Acompanhante -->
                                 <div class="col-md-6">
-                                    <label class="form-label">Nome do Acompanhante:</label>
+                                    <label class="form-label fw-bold">Nome do Acompanhante:</label>
                                     <input type="text" class="form-control form-control-sm" id="nomeAcompanhante" name="nomeAcompanhante" />
                                 </div>
                                 <!-- Coluna de tamanho 6 para Vínculo com Acompanhante -->
                                 <div class="col-md-3">
-                                    <label class="form-label">Vínculo com Acompanhante:</label>
+                                    <label class="form-label fw-bold">Vínculo com Acompanhante:</label>
                                     <input type="text" class="form-control form-control-sm" id="vinculoAcompanhante" name="vinculoAcompanhante" />
                                 </div>
                                 <!-- Coluna de tamanho 4 para Idade do Acompanhante -->
                                 <div class="col-md-2">
-                                    <label class="form-label">Idade:</label>
+                                    <label class="form-label fw-bold">Idade:</label>
                                     <input type="text" class="form-control form-control-sm" id="idadeAcompanhante" name="idadeAcompanhante" />
                                 </div>
                                 <!-- Coluna de tamanho 8 para Acompanhante no Retorno -->
                                 <div class="row mt-3">
                                     <div class="col-md-6">
-                                        <label class="form-label">O acompanhante lhe acompanhará no retorno a sua residência?</label><br />
+                                        <label class="form-label fw-bold">O acompanhante lhe acompanhará no retorno a sua residência?</label><br />
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" id="acompanhanteSim" name="acompanhanteRetorno" value="Sim" onclick="toggleDescricaoAcompanhante(this)" />
                                             <label class="form-check-label" for="acompanhanteSim">Sim</label>
@@ -298,7 +298,7 @@
                             <div class="row mt-3">
                                 <!-- Coluna de tamanho 6 para Especialidade -->
                                 <div class="col-md-6">
-                                    <label class="form-label">Especialidade:</label>
+                                    <label class="form-label fw-bold">Especialidade:</label>
                                     <select class="form-select form-select-sm" name="especialidade">
                                         <option value="cirurgiaGeral">Cirurgia Geral</option>
                                         <option value="cirurgiaMao">Cirurgia de Mão</option>
@@ -314,14 +314,14 @@
                                 </div>
                                 <!-- Coluna de tamanho 6 para Nome do Procedimento -->
                                 <div class="col-md-6">
-                                    <label class="form-label">Nome do Procedimento:</label>
+                                    <label class="form-label fw-bold">Nome do Procedimento:</label>
                                     <input type="text" class="form-control form-control-sm" name="nomeProcedimento" />
                                 </div>
                             </div>
                             <div class="row mt-3">
                                 <!-- Coluna de tamanho 12 para Risco Cirúrgico -->
                                 <div class="col-md-12">
-                                    <label class="form-label">Risco Cirúrgico:</label><br />
+                                    <label class="form-label fw-bold">Risco Cirúrgico:</label><br />
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" id="asaI" name="riscoCirurgico" value="ASA I" />
                                         <label class="form-check-label" for="asaI">ASA I</label>
@@ -344,7 +344,7 @@
                             <div class="row mt-3">
                                 <!-- Coluna de tamanho 12 para Exames Complementares -->
                                 <div class="col-md-12">
-                                    <label class="form-label">Exames Complementares:</label><br />
+                                    <label class="form-label fw-bold">Exames Complementares:</label><br />
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="checkbox" id="hemograma" name="exameHemograma" value="Hemograma" />
                                         <label class="form-check-label" for="hemograma">Hemograma</label>
@@ -375,7 +375,7 @@
                             <div class="row mt-3">
                                 <!-- Coluna de tamanho 12 para Jejum -->
                                 <div class="col-md-2">
-                                    <label for="jejumSim" class="form-label">Jejum:</label><br />
+                                    <label for="jejumSim" class="form-label fw-bold">Jejum:</label><br />
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" id="jejumSim" name="jejum" value="Sim" />
                                         <label class="form-check-label" for="jejumSim">Sim</label>
@@ -386,7 +386,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-1">
-                                    <label for="hora" class="form-label">Hora:</label>
+                                    <label for="hora" class="form-label fw-bold">Hora:</label>
                                     <input type="time" class="form-control form-control-sm" id="hora" name="hora" placeholder="Hora" aria-label="Hora" />
                                 </div>
                                 <div class="col-md-9">
@@ -397,7 +397,7 @@
                             <div class="row mt-3">
                                 <!-- Coluna de tamanho 12 para Comorbidades -->
                                 <div class="col-md-12">
-                                    <label class="form-label">Comorbidades:</label>
+                                    <label class="form-label fw-bold">Comorbidades:</label>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="checkbox" id="hipertensao" name="comorbidadeHipertensao" value="Hipertensão" />
                                         <label class="form-check-label" for="hipertensao">Hipertensão</label>
@@ -458,7 +458,7 @@
                             <div class="row mt-3">
                                 <!-- Coluna de tamanho 12 para Neoplasias -->
                                 <div class="col-md-12">
-                                    <label class="form-label">Já teve Neoplasias?</label>
+                                    <label class="form-label fw-bold">Já teve Neoplasias?</label>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" id="neoplasiasNao" name="neoplasias" value="Não" onclick="toggleNeoplasiasInput(this)" />
                                         <label class="form-check-label" for="neoplasiasNao">Não</label>
@@ -489,7 +489,7 @@
                             <div class="row mt-3">
                                 <!-- Coluna de tamanho 12 para Tratamento -->
                                 <div class="col-md-12">
-                                    <label class="form-label">Fez Tratamento?</label>
+                                    <label class="form-label fw-bold">Fez Tratamento?</label>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" id="tratamentoNao" name="tratamento" value="Não" onclick="toggleDescricaoTratamento(this)" />
                                         <label class="form-check-label" for="tratamentoNao">Não</label>
@@ -515,7 +515,7 @@
                             <div class="row mt-3">
                                 <!-- Coluna de tamanho 12 para Cirurgias Anteriores -->
                                 <div class="col-md-12">
-                                    <label class="form-label">Cirurgia(s) anterior(es):</label><br />
+                                    <label class="form-label fw-bold">Cirurgia(s) anterior(es):</label><br />
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" id="cirurgiasAnterioresSim" name="cirurgiasAnteriores" value="Sim" onclick="toggleDescricaoCirurgias(this)" />
                                         <label class="form-check-label" for="cirurgiasAnterioresSim">Sim</label>
@@ -546,7 +546,7 @@
                             <div class="row mt-3">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="lista_medicamentos" class="form-label">Lista de Medicamentos:</label>
+                                        <label for="lista_medicamentos" class="form-label fw-bold">Lista de Medicamentos:</label>
                                         <table class="table table-bordered table-sm">
                                             <thead>
                                                 <tr>
@@ -594,7 +594,7 @@
                             <div class="row mt-3">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="medicamentos" class="form-label">Medicamentos Alergicos:</label>
+                                        <label for="medicamentos" class="form-label fw-bold">Medicamentos Alergicos:</label>
                                         <table class="table table-bordered table-sm" id="tabelaMedicamentosAlergia">
                                             <thead>
                                                 <tr>
@@ -730,7 +730,7 @@
                             <div class="row mt-3">
                                 <!-- Coluna de tamanho 12 para Tabagista -->
                                 <div class="col-md-4">
-                                    <label class="form-label">Tabagista?</label><br />
+                                    <label class="form-label fw-bold">Tabagista?</label><br />
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" id="tabagistaNao" name="tabagista" value="Não" />
                                         <label class="form-check-label" for="tabagistaNao">Não</label>
@@ -745,7 +745,7 @@
 
                                 <!-- Coluna de tamanho 12 para Etilista -->
                                 <div class="col-md-4">
-                                    <label class="form-label">Etilista?</label><br />
+                                    <label class="form-label fw-bold">Etilista?</label><br />
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" id="etilistaNao" name="etilista" value="Não" />
                                         <label class="form-check-label" for="etilistaNao">Não</label>
@@ -759,7 +759,7 @@
                                 </div>
                                 <!-- Coluna de tamanho 12 para Drogas Ilícitas -->
                                 <div class="col-md-4">
-                                    <label class="form-label">Drogas Ilícitas?</label><br />
+                                    <label class="form-label fw-bold">Drogas Ilícitas?</label><br />
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" id="drogasIlicitasNao" name="drogasIlicitas" value="Não" />
                                         <label class="form-check-label" for="drogasIlicitasNao">Não</label>
@@ -781,7 +781,7 @@
                                 <div class="row mt-3">
                                     <!-- Coluna de tamanho 12 para Nível de Consciência -->
                                     <div class="col-6">
-                                        <label class="form-label">Nível de Consciência:</label><br />
+                                        <label class="form-label fw-bold">Nível de Consciência:</label><br />
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="checkbox" id="nivelConscienciaLucido" name="nivelConscienciaLucido" value="Lúcido" />
                                             <label class="form-check-label" for="nivelConscienciaLucido">Lúcido</label>
@@ -798,7 +798,7 @@
 
                                     <!-- Coluna de tamanho 12 para Estado Emocional -->
                                     <div class="col-6">
-                                        <label class="form-label">Estado Emocional:</label><br />
+                                        <label class="form-label fw-bold">Estado Emocional:</label><br />
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="checkbox" id="estadoEmocionalTranquilo" name="estadoEmocionalTranquilo" value="Tranquilo" />
                                             <label class="form-check-label" for="estadoEmocionalTranquilo">Tranquilo</label>
@@ -820,7 +820,7 @@
                                 <div class="row mt-3">
                                     <!-- Coluna de tamanho 3 para Acuidade Visual -->
                                     <div class="col-md-4">
-                                        <label class="form-label">Acuidade Visual:</label><br />
+                                        <label class="form-label fw-bold">Acuidade Visual:</label><br />
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" id="acuidadeVisualNormal" name="acuidadeVisual" value="Normal" />
                                             <label class="form-check-label" for="acuidadeVisualNormal">Normal</label>
@@ -833,7 +833,7 @@
 
                                     <!-- Coluna de tamanho 3 para Acuidade Auditiva -->
                                     <div class="col-md-4">
-                                        <label class="form-label">Acuidade Auditiva:</label><br />
+                                        <label class="form-label fw-bold">Acuidade Auditiva:</label><br />
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" id="acuidadeAuditivaNormal" name="acuidadeAuditiva" value="Normal" />
                                             <label class="form-check-label" for="acuidadeAuditivaNormal">Normal</label>
@@ -845,7 +845,7 @@
                                     </div>
                                     <!-- Coluna de tamanho 6 para Higiene -->
                                     <div class="col-md-4">
-                                        <label class="form-label">Higiene:</label> <br />
+                                        <label class="form-label fw-bold">Higiene:</label> <br />
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" id="higieneBoa" name="higiene" value="Boa" />
                                             <label class="form-check-label" for="higieneBoa">Boa</label>
@@ -859,7 +859,7 @@
                                 <div class="row mt-3">
                                     <!-- Coluna de tamanho 6 para Deambulação -->
                                     <div class="col-12">
-                                        <label class="form-label">Deambulação:</label><br />
+                                        <label class="form-label fw-bold">Deambulação:</label><br />
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" id="deambulacaoSemDificuldade" name="deambulacao" value="Sem dificuldade" />
                                             <label class="form-check-label" for="deambulacaoSemDificuldade">Sem dificuldade</label>
@@ -893,7 +893,7 @@
                                 <div class="row mt-3">
                                     <!-- Coluna de tamanho 6 para Uso de Prótese/Órtese -->
                                     <div class="col-md-12">
-                                        <label class="form-label">Uso de Prótese/Órtese:</label><br />
+                                        <label class="form-label fw-bold">Uso de Prótese/Órtese:</label><br />
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="checkbox" id="usoDentaria" name="usoDentaria" value="Dentária" />
                                             <label class="form-check-label" for="usoDentaria">Dentária</label>
@@ -935,7 +935,7 @@
                                 <div class="row mt-3">
                                     <!-- Coluna de tamanho 6 para Tricotomia -->
                                     <div class="col-md-9">
-                                        <label class="form-label">Tricotomia:</label><br />
+                                        <label class="form-label fw-bold">Tricotomia:</label><br />
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" id="tricotomiaNao" name="tricotomia" value="Não" />
                                             <label class="form-check-label" for="tricotomiaNao">Não</label>
@@ -971,7 +971,7 @@
                                 <div class="row mt-3">
                                     <!-- Coluna de tamanho 6 para Uso de Adereços/Adornos -->
                                     <div class="col-md-6">
-                                        <label class="form-label">Uso de Adereços/Adornos:</label><br />
+                                        <label class="form-label fw-bold">Uso de Adereços/Adornos:</label><br />
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" id="usoAderecosSim" name="usoAderecos" value="Sim" />
                                             <label class="form-check-label" for="usoAderecosSim">Sim</label>
@@ -985,7 +985,7 @@
                                 <div class="row mt-3">
                                     <!-- Coluna de tamanho 6 para Descrição de Alterações -->
                                     <div class="col-md-12">
-                                        <label class="form-label">Descrição de Alterações:</label>
+                                        <label class="form-label fw-bold">Descrição de Alterações:</label>
                                         <textarea class="form-control form-control-sm" name="descricaoAlteracoes" placeholder="Descreva alterações se houver" aria-label="Descreva alterações se houver" rows="5"></textarea>
                                     </div>
                                 </div>
