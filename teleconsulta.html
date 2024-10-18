@@ -63,7 +63,7 @@
             <div class="container mt-3">
                 <div class="row mt-3">
                     <div class="col-md-12">
-                        <label for="dataCirurgia" class="form-label">Data prevista para a cirurgia:</label>
+                        <label for="dataCirurgia" class="form-label fw-bold">Data prevista para a cirurgia:</label>
                         <div class="col-2">
                             <input type="date" class="form-control form-control-sm" id="dataCirurgia" name="dataCirurgia" />
                         </div>
@@ -73,18 +73,18 @@
                 <div class="mt-5">
                     <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="funcao-papel-tab" data-bs-toggle="tab" data-bs-target="#funcao-papel" type="button" role="tab" aria-controls="funcao-papel" aria-selected="true">MODO FUNÇÃO DO PAPEL</button>
+                            <button class="nav-link active fw-bold" id="funcao-papel-tab" data-bs-toggle="tab" data-bs-target="#funcao-papel" type="button" role="tab" aria-controls="funcao-papel" aria-selected="true">MODO FUNÇÃO DO PAPEL</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="interdependencia-tab" data-bs-toggle="tab" data-bs-target="#interdependencia" type="button" role="tab" aria-controls="interdependencia" aria-selected="false">MODO INTERDEPENDÊNCIA</button>
+                            <button class="nav-link fw-bold" id="interdependencia-tab" data-bs-toggle="tab" data-bs-target="#interdependencia" type="button" role="tab" aria-controls="interdependencia" aria-selected="false">MODO INTERDEPENDÊNCIA</button>
                         </li>
-                        <li class="nav-item" role="presentation">
+                        <li class="nav-item fw-bold" role="presentation">
                             <button class="nav-link" id="autoconceito-tab" data-bs-toggle="tab" data-bs-target="#autoconceito" type="button" role="tab" aria-controls="autoconceito" aria-selected="false">MODO AUTOCONCEITO</button>
                         </li>
-                        <li class="nav-item" role="presentation">
+                        <li class="nav-item fw-bold" role="presentation">
                             <button class="nav-link" id="fisiologico-tab" data-bs-toggle="tab" data-bs-target="#fisiologico" type="button" role="tab" aria-controls="fisiologico" aria-selected="false">MODO FISIOLÓGICO</button>
                         </li>
-                        <li class="nav-item" role="presentation">
+                        <li class="nav-item fw-bold" role="presentation">
                             <button class="nav-link" id="diagnosticos-tab" data-bs-toggle="tab" data-bs-target="#diagnosticos" type="button" role="tab" aria-controls="diagnosticos" aria-selected="false">DIAGNÓSTICOS/METAS/INTERVENÇÕES</button>
                         </li>
                     </ul>
@@ -93,106 +93,105 @@
                     <!-- Aba "Função do Papel" -->
                     <div class="tab-pane fade show active" id="funcao-papel" role="tabpanel" aria-labelledby="funcao-papel-tab">
                         <div id="funcao-papel-form">
-                                <div class="row mt-3">
-                                    <!-- Procedência -->
-                                    <div class="col-md-12">
-                                        <label for="procedencia" class="form-label">Procedência:</label><br />
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="procedenciaResidencia" name="procedencia" value="Residência" />
-                                            <label class="form-check-label" for="procedenciaResidencia">Residência</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="procedenciaHupe" name="procedencia" value="HUPE" />
-                                            <label class="form-check-label" for="procedenciaHupe">HUPE</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="procedenciaOutro" name="procedencia" value="Outro" onclick="toggleDescricaoProcedencia(this)" />
-                                            <label class="form-check-label" for="procedenciaOutro">Outro:</label>
-                                        </div>
-                                        <input type="text" class="form-control form-control-sm mt-2" name="procedenciaDescricao" placeholder="Descreva" aria-label="Outras Procedências" style="display: none" id="descricaoProcedencia" />
+                            <div class="row mt-3">
+                                <!-- Procedência -->
+                                <div class="col-md-12">
+                                    <label for="procedencia" class="form-label fw-bold">Procedência:</label><br />
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="procedenciaResidencia" name="procedencia" value="Residência" />
+                                        <label class="form-check-label" for="procedenciaResidencia">Residência</label>
                                     </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="procedenciaHupe" name="procedencia" value="HUPE" />
+                                        <label class="form-check-label" for="procedenciaHupe">HUPE</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="procedenciaOutro" name="procedencia" value="Outro" onclick="toggleDescricaoProcedencia(this)" />
+                                        <label class="form-check-label" for="procedenciaOutro">Outro:</label>
+                                    </div>
+                                    <input type="text" class="form-control form-control-sm mt-2" name="procedenciaDescricao" placeholder="Descreva" aria-label="Outras Procedências" style="display: none" id="descricaoProcedencia" />
+                                </div>
+                            </div>
+
+                            <script>
+                                function toggleDescricaoProcedencia(radio) {
+                                    const descricaoProcedencia = document.getElementById("descricaoProcedencia");
+                                    if (radio.checked && radio.value === "Outro") {
+                                        descricaoProcedencia.style.display = "block";
+                                    } else {
+                                        descricaoProcedencia.style.display = "none";
+                                    }
+                                }
+                            </script>
+
+                            <!-- Gênero -->
+                            <div class="row mt-3">
+                                <div class="col-md-12">
+                                    <label class="form-label fw-bold">Gênero:</label><br />
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="mulherCisgenero" name="genero" value="Mulher Cisgênero" />
+                                        <label class="form-check-label" for="mulherCisgenero">Mulher Cisgênero</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="homemCisgenero" name="genero" value="Homem Cisgênero" />
+                                        <label class="form-check-label" for="homemCisgenero">Homem Cisgênero</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="mulherTransgenero" name="genero" value="Mulher Transgênero" />
+                                        <label class="form-check-label" for="mulherTransgenero">Mulher Transgênero</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="homemTransgenero" name="genero" value="Homem Transgênero" />
+                                        <label class="form-check-label" for="homemTransgenero">Homem Transgênero</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="naoBinario" name="genero" value="Não-binário" />
+                                        <label class="form-check-label" for="naoBinario">Não-binário</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="outrosGenero" name="genero" value="Outros" onclick="toggleDescricaoGenero(this)" />
+                                        <label class="form-check-label" for="outrosGenero">Outros:</label>
+                                    </div>
+                                    <input type="text" class="form-control form-control-sm mt-2" name="outrosGeneroDescricao" placeholder="Descreva" aria-label="Outros Gêneros" style="display: none" id="descricaoGenero" />
                                 </div>
 
                                 <script>
-                                    function toggleDescricaoProcedencia(radio) {
-                                        const descricaoProcedencia = document.getElementById("descricaoProcedencia");
-                                        if (radio.checked && radio.value === "Outro") {
-                                            descricaoProcedencia.style.display = "block";
+                                    function toggleDescricaoGenero(radio) {
+                                        const descricaoGenero = document.getElementById("descricaoGenero");
+                                        if (radio.checked) {
+                                            descricaoGenero.style.display = "block";
                                         } else {
-                                            descricaoProcedencia.style.display = "none";
+                                            descricaoGenero.style.display = "none";
                                         }
                                     }
                                 </script>
 
-                                <!-- Gênero -->
+                                <!-- Pessoa com Deficiência -->
                                 <div class="row mt-3">
                                     <div class="col-md-12">
-                                        <label class="form-label">Gênero:</label><br />
+                                        <label class="form-label fw-bold">Pessoa com deficiência:</label><br />
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="mulherCisgenero" name="genero" value="Mulher Cisgênero" />
-                                            <label class="form-check-label" for="mulherCisgenero">Mulher Cisgênero</label>
+                                            <input class="form-check-input" type="radio" id="deficienciaNao" name="deficiencia" value="Não" onclick="toggleDescricaoDeficiencia(this)" />
+                                            <label class="form-check-label" for="deficienciaNao">Não</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="homemCisgenero" name="genero" value="Homem Cisgênero" />
-                                            <label class="form-check-label" for="homemCisgenero">Homem Cisgênero</label>
+                                            <input class="form-check-input" type="radio" id="deficienciaSim" name="deficiencia" value="Sim" onclick="toggleDescricaoDeficiencia(this)" />
+                                            <label class="form-check-label" for="deficienciaSim">Sim</label>
                                         </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="mulherTransgenero" name="genero" value="Mulher Transgênero" />
-                                            <label class="form-check-label" for="mulherTransgenero">Mulher Transgênero</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="homemTransgenero" name="genero" value="Homem Transgênero" />
-                                            <label class="form-check-label" for="homemTransgenero">Homem Transgênero</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="naoBinario" name="genero" value="Não-binário" />
-                                            <label class="form-check-label" for="naoBinario">Não-binário</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="outrosGenero" name="genero" value="Outros" onclick="toggleDescricaoGenero(this)" />
-                                            <label class="form-check-label" for="outrosGenero">Outros:</label>
-                                        </div>
-                                        <input type="text" class="form-control form-control-sm mt-2" name="outrosGeneroDescricao" placeholder="Descreva" aria-label="Outros Gêneros" style="display: none" id="descricaoGenero" />
+                                        <input type="text" class="form-control form-control-sm mt-2" name="deficienciaDescricao" placeholder="Caso positivo, qual?" aria-label="Descrição da Deficiência" style="display: none" id="descricaoDeficiencia" />
                                     </div>
-
-                                    <script>
-                                        function toggleDescricaoGenero(radio) {
-                                            const descricaoGenero = document.getElementById("descricaoGenero");
-                                            if (radio.checked) {
-                                                descricaoGenero.style.display = "block";
-                                            } else {
-                                                descricaoGenero.style.display = "none";
-                                            }
-                                        }
-                                    </script>
-
-                                    <!-- Pessoa com Deficiência -->
-                                    <div class="row mt-3">
-                                        <div class="col-md-12">
-                                            <label class="form-label">Pessoa com deficiência:</label><br />
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" id="deficienciaNao" name="deficiencia" value="Não" onclick="toggleDescricaoDeficiencia(this)" />
-                                                <label class="form-check-label" for="deficienciaNao">Não</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" id="deficienciaSim" name="deficiencia" value="Sim" onclick="toggleDescricaoDeficiencia(this)" />
-                                                <label class="form-check-label" for="deficienciaSim">Sim</label>
-                                            </div>
-                                            <input type="text" class="form-control form-control-sm mt-2" name="deficienciaDescricao" placeholder="Caso positivo, qual?" aria-label="Descrição da Deficiência" style="display: none" id="descricaoDeficiencia" />
-                                        </div>
-                                    </div>
-
-                                    <script>
-                                        function toggleDescricaoDeficiencia(radio) {
-                                            const descricaoDeficiencia = document.getElementById("descricaoDeficiencia");
-                                            if (radio.id === "deficienciaSim" && radio.checked) {
-                                                descricaoDeficiencia.style.display = "block";
-                                            } else {
-                                                descricaoDeficiencia.style.display = "none";
-                                            }
-                                        }
-                                    </script>
                                 </div>
+
+                                <script>
+                                    function toggleDescricaoDeficiencia(radio) {
+                                        const descricaoDeficiencia = document.getElementById("descricaoDeficiencia");
+                                        if (radio.id === "deficienciaSim" && radio.checked) {
+                                            descricaoDeficiencia.style.display = "block";
+                                        } else {
+                                            descricaoDeficiencia.style.display = "none";
+                                        }
+                                    }
+                                </script>
                             </div>
                         </div>
                     </div>
@@ -203,22 +202,22 @@
                                 <div class="row mt-3">
                                     <!-- Coluna de tamanho 6 para Nome do Acompanhante -->
                                     <div class="col-md-6">
-                                        <label class="form-label">Nome do Acompanhante:</label>
+                                        <label class="form-label fw-bold">Nome do Acompanhante:</label>
                                         <input type="text" class="form-control form-control-sm" id="nomeAcompanhante" name="nomeAcompanhante" />
                                     </div>
                                     <!-- Coluna de tamanho 6 para Vínculo com Acompanhante -->
                                     <div class="col-md-3">
-                                        <label class="form-label">Vínculo com Acompanhante:</label>
+                                        <label class="form-label fw-bold">Vínculo com Acompanhante:</label>
                                         <input type="text" class="form-control form-control-sm" id="vinculoAcompanhante" name="vinculoAcompanhante" />
                                     </div>
                                     <!-- Coluna de tamanho 4 para Idade do Acompanhante -->
                                     <div class="col-md-2">
-                                        <label class="form-label">Idade:</label>
+                                        <label class="form-label fw-bold">Idade:</label>
                                         <input type="text" class="form-control form-control-sm" id="idadeAcompanhante" name="idadeAcompanhante" />
                                     </div>
                                     <!-- Coluna de tamanho 8 para Acompanhante no Retorno -->
                                     <div class="row mt-3">
-                                        <label class="form-label">O acompanhante lhe acompanhará no retorno a sua residência?</label>
+                                        <label class="form-label fw-bold">O acompanhante lhe acompanhará no retorno a sua residência?</label>
                                         <div class="col-md-4">
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="radio" id="acompanhanteSim" name="acompanhanteRetorno" value="Sim" onclick="toggleDescricaoAcompanhante(this)" />
@@ -248,7 +247,7 @@
                                 </div>
                                 <div class="row mt-3">
                                     <div class="col-md-6">
-                                        <label class="form-label">Tem ajuda para cuidados de saúde:</label><br />
+                                        <label class="form-label fw-bold">Tem ajuda para cuidados de saúde:</label><br />
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" id="ajudaSaudeSim" name="ajudaSaude" value="Sim" onclick="toggleDescricaoAjudaSaude(this)" />
                                             <label class="form-check-label" for="ajudaSaudeSim">Sim</label>
@@ -286,7 +285,7 @@
                                 <div class="row mt-3">
                                     <!-- Coluna de tamanho 6 para Especialidade -->
                                     <div class="col-md-3">
-                                        <label class="form-label">Especialidade:</label>
+                                        <label class="form-label fw-bold">Especialidade:</label>
                                         <select class="form-select form-select-sm" name="especialidade">
                                             <option value="cirurgiaGeral">Cirurgia Geral</option>
                                             <option value="cirurgiaMao">Cirurgia de Mão</option>
@@ -302,14 +301,14 @@
                                     </div>
                                     <!-- Coluna de tamanho 6 para Nome do Procedimento -->
                                     <div class="col-md-3">
-                                        <label class="form-label">Nome do Procedimento:</label>
+                                        <label class="form-label fw-bold">Nome do Procedimento:</label>
                                         <input type="text" class="form-control form-control-sm" name="nomeProcedimento" />
                                     </div>
                                 </div>
                                 <!-- Orientação e Dúvidas -->
                                 <div class="row mt-3">
                                     <div class="col-md-12">
-                                        <label class="form-label">Orientado pela equipe médica quanto ao procedimento:</label><br />
+                                        <label class="form-label fw-bold">Orientado pela equipe médica quanto ao procedimento:</label><br />
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" id="orientadoSim" name="orientado" value="Sim" />
                                             <label class="form-check-label" for="orientadoSim">Sim</label>
@@ -322,7 +321,7 @@
                                 </div>
                                 <div class="row mt-3">
                                     <div class="col-md-12">
-                                        <label class="form-label">Dúvidas quanto ao procedimento:</label><br />
+                                        <label class="form-label fw-bold">Dúvidas quanto ao procedimento:</label><br />
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" id="duvidasSim" name="duvidasProcedimento" value="Sim" onclick="toggleDescricaoDuvidas(this)" />
                                             <label class="form-check-label" for="duvidasSim">Sim</label>
@@ -350,7 +349,7 @@
                                 </script>
                                 <div class="row mt-3">
                                     <div class="col-md-12">
-                                        <label class="form-label">Paciente foi orientado quanto a necessidade de trazer os exames:</label><br />
+                                        <label class="form-label fw-bold">Paciente foi orientado quanto a necessidade de trazer os exames:</label><br />
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" id="orientadoExamesSim" name="orientadoExames" value="Sim" />
                                             <label class="form-check-label" for="orientadoExamesSim">Sim</label>
@@ -364,7 +363,7 @@
                                 <div class="row mt-3">
                                     <!-- Coluna de tamanho 12 para Comorbidades -->
                                     <div class="col-md-12">
-                                        <label class="form-label">Comorbidades:</label>
+                                        <label class="form-label fw-bold">Comorbidades:</label>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="checkbox" id="hipertensao" name="comorbidadeHipertensao" value="Hipertensão" />
                                             <label class="form-check-label" for="hipertensao">Hipertensão</label>
@@ -426,7 +425,7 @@
                                 <div class="row mt-3">
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <label for="lista_medicamentos" class="form-label">Lista de Medicamentos:</label>
+                                            <label for="lista_medicamentos" class="form-label fw-bold">Lista de Medicamentos:</label>
                                             <table class="table table-bordered table-sm">
                                                 <thead>
                                                     <tr>
@@ -473,14 +472,14 @@
                                 <div class="row mt-3">
                                     <!-- Coluna de tamanho 12 para Reações Alérgicas -->
                                     <div class="col-md-12">
-                                        <label class="form-label mt-3">Descreva a reação alérgica, se houver:</label>
+                                        <label class="form-label fw-bold mt-3">Descreva a reação alérgica, se houver:</label>
                                         <input type="text" class="form-control form-control-sm" name="reacaoAlergica" placeholder="Descreva a reação alérgica" aria-label="Reação Alérgica" />
                                     </div>
                                 </div>
                                 <div class="row mt-3">
                                     <!-- Coluna de tamanho 6 para Observações -->
                                     <div class="col-md-12">
-                                        <label for="observacoesautoconceito" class="form-label">Observações:</label>
+                                        <label for="observacoesautoconceito" class="form-label fw-bold">Observações:</label>
                                         <textarea class="form-control form-control-sm" id="observacoesautoconceito" name="observacoesautoconceito" placeholder="Descreva alterações se houver" aria-label="Descreva alterações se houver" rows="3"></textarea>
                                     </div>
                                 </div>
@@ -581,7 +580,7 @@
                                 <div class="row mt-3">
                                     <!-- Coluna de tamanho 12 para Estado Emocional -->
                                     <div class="col-6">
-                                        <label class="form-label">Estado Emocional:</label><br />
+                                        <label class="form-label fw-bold">Estado Emocional:</label><br />
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="checkbox" id="estadoEmocionalTranquilo" name="estadoEmocionalTranquilo" value="Tranquilo" />
                                             <label class="form-check-label" for="estadoEmocionalTranquilo">Tranquilo</label>
@@ -603,7 +602,7 @@
                                 <!--Sintomas respitaorios-->
                                 <div class="row mt-3">
                                     <div class="col-md-6">
-                                        <label class="form-label">Sintomas Respiratórios:</label><br />
+                                        <label class="form-label fw-bold">Sintomas Respiratórios:</label><br />
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" id="sintomasRespiratoriosSim" name="sintomasRespiratorios" value="Sim" onclick="toggleDescricaoSintomasRespiratorios(this)" />
                                             <label class="form-check-label" for="sintomasRespiratoriosSim">Sim</label>
@@ -631,7 +630,7 @@
                                 <div class="row mt-3">
                                     <!-- Coluna de tamanho 6 para Uso de Prótese/Órtese -->
                                     <div class="col-md-6">
-                                        <label class="form-label">Uso de Prótese/Órtese:</label><br />
+                                        <label class="form-label fw-bold">Uso de Prótese/Órtese:</label><br />
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="checkbox" id="usoDentaria" name="usoDentaria" value="Dentária" />
                                             <label class="form-check-label" for="usoDentaria">Dentária</label>
@@ -656,7 +655,7 @@
                                 </div>
                                 <div class="row mt-3">
                                     <div class="col-md-6">
-                                        <label class="form-label">Intolerância alimentar:</label><br />
+                                        <label class="form-label fw-bold">Intolerância alimentar:</label><br />
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" id="intoleranciaAlimentarSim" name="intoleranciaAlimentar" value="Sim" onclick="toggleDescricaoIntolerancia(this)" />
                                             <label class="form-check-label" for="intoleranciaAlimentarSim">Sim</label>
@@ -685,7 +684,7 @@
                                 <!--Auxilio Locomoção-->
                                 <div class="row mt-3">
                                     <div class="col-md-6">
-                                        <label class="form-label">Auxílio locomoção:</label><br />
+                                        <label class="form-label fw-bold">Auxílio locomoção:</label><br />
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" id="auxilioLocomocaoSim" name="auxilioLocomocao" value="Sim" onclick="toggleDescricaoAuxilioLocomocao(this)" />
                                             <label class="form-check-label" for="auxilioLocomocaoSim">Sim</label>
