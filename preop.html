@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Bootstrap demo</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
+    </head>
+
+    <body style="background-color: #f4f4f5">
+        <header>
+            <nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img src="img/logo.png" alt="Logo" width="200" height="50" class="d-inline-block align-text-top" />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarColor03">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="index.html"
+                                    >Home
+                                    <span class="visually-hidden">(current)</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="preconsulta.html">Pré Consulta</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="teleconsulta.html">Teleconsulta</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="preop.html">Pre-Operatório</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="intraop.html">Intraoperatorio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="posop.html">Pós-operatório</a>
+                            </li>
+                            <!--
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Separated link</a>
+                                    </div>
+                                </li>
+                                -->
+                        </ul>
+                        <form class="d-flex">
+                            <a class="btn btn-secondary me-2" href="contato.html">Contato</a>
+                            <button class="btn btn-secondary" type="submit">Version 1.0.0</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <form>
+            <div class="container mt-5">
+                <h5>Anotação de Enfermagem Intraoperatório</h5>
+                <!-- Horário de Entrada na Sala Operatória -->
+                <div class="row mt-3">
+                    <div class="col-sm-8">
+                        <label class="form-label form-label-sm" for="horarioEntrada">Horário de Entrada na Sala Operatória</label>
+                        <div class="col-2">
+                            <input type="time" class="form-control form-control-sm" id="horarioEntrada" name="horarioEntrada" placeholder="Horário" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <!-- Coluna de tamanho 6 para Deambulação -->
+                    <div class="col-12">
+                        <label class="form-label">Entrada do paciente em sala opertória:</label><br />
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="deambulacaoSemDificuldade" name="deambulacao" value="Sem dificuldade" />
+                            <label class="form-check-label" for="deambulacaoSemDificuldade">Sem dificuldade</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="deambulacaoComDificuldade" name="deambulacao" value="Com dificuldade" />
+                            <label class="form-check-label" for="deambulacaoComDificuldade">Com dificuldade</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="deambulacaoAndador" name="deambulacao" value="Andador" />
+                            <label class="form-check-label" for="deambulacaoAndador">Andador</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="deambulacaoMuletas" name="deambulacao" value="Muletas" />
+                            <label class="form-check-label" for="deambulacaoMuletas">Muletas</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="deambulacaoBengala" name="deambulacao" value="Bengala" />
+                            <label class="form-check-label" for="deambulacaoBengala">Bengala</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="deambulacaoCadeiraDeRodas" name="deambulacao" value="Cadeira de rodas" />
+                            <label class="form-check-label" for="deambulacaoCadeiraDeRodas">Cadeira de rodas</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="deambulacaoEmMaca" name="deambulacao" value="Em maca" />
+                            <label class="form-check-label" for="deambulacaoEmMaca">Em maca</label>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <label class="form-label form-label-sm"><h5>Cirurgia Segura</h5></label>
+                <div class="row mt-3">
+                    <div class="col-sm-4">
+                        <label class="form-label form-label-sm">Pulseira para risco de queda afixada no paciente</label>
+                        <div class="d-flex">
+                            <div class="form-check form-check-inline form-check-sm">
+                                <input class="form-check-input" type="radio" name="pulseiraRiscoQueda" id="simPulseira" value="sim" />
+                                <label class="form-check-label" for="simPulseira">Sim</label>
+                            </div>
+                            <div class="form-check form-check-inline form-check-sm">
+                                <input class="form-check-input" type="radio" name="pulseiraRiscoQueda" id="naoAplicaPulseira" value="naoSeAplica" />
+                                <label class="form-check-label" for="naoAplicaPulseira">Não se aplica</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Confirmação de Identificação do Paciente -->
+                    <div class="col-sm-6">
+                        <label class="form-label form-label-sm">Confirmada identificação do paciente no prontuário e pulseira de identificação</label>
+                        <div class="form-check form-check-inline form-check-sm">
+                            <input class="form-check-input" type="radio" name="identificacaoPaciente" id="simIdentificacao" value="sim" />
+                            <label class="form-check-label" for="simIdentificacao">Sim</label>
+                        </div>
+                        <div class="form-check form-check-inline form-check-sm">
+                            <input class="form-check-input" type="radio" name="identificacaoPaciente" id="naoIdentificacao" value="nao" />
+                            <label class="form-check-label" for="naoIdentificacao">Não</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pulseira de Identificação Afixada no Paciente -->
+                <div class="row mt-3">
+                    <div class="col-sm-4">
+                        <label class="form-label form-label-sm">Pulseira de identificação afixada no paciente</label>
+                        <div class="d-flex">
+                            <div class="form-check form-check-inline form-check-sm">
+                                <input class="form-check-input" type="radio" name="pulseiraIdentificacao" id="simPulseiraIdentificacao" value="sim" />
+                                <label class="form-check-label" for="simPulseiraIdentificacao">Sim</label>
+                            </div>
+                            <div class="form-check form-check-inline form-check-sm">
+                                <input class="form-check-input" type="radio" name="pulseiraIdentificacao" id="naoPulseiraIdentificacao" value="nao" />
+                                <label class="form-check-label" for="naoPulseiraIdentificacao">Não</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Jejum -->
+                    <div class="col-sm-3">
+                        <label class="form-label form-label-sm">Jejum</label>
+                        <div class="d-flex">
+                            <div class="form-check form-check-inline form-check-sm">
+                                <input class="form-check-input" type="radio" name="jejum" id="simJejum" value="sim" onclick="toggleHorarioJejum(this.checked)" />
+                                <label class="form-check-label" for="simJejum">Sim</label>
+                            </div>
+                            <div class="form-check form-check-inline form-check-sm">
+                                <input class="form-check-input" type="radio" name="jejum" id="naoAplicaJejum" value="naoSeAplica" onclick="toggleHorarioJejum(!this.checked)" />
+                                <label class="form-check-label" for="naoAplicaJejum">Não se aplica</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6" id="horarioJejumField" style="display: none">
+                            <label class="form-label form-label-sm" for="horarioJejum">Se sim, Horário do início do Jejum:</label>
+                            <input type="time" class="form-control form-control-sm" id="horarioJejum" name="horarioJejum" />
+                        </div>
+                    </div>
+
+                    <script>
+                        function toggleHorarioJejum(show) {
+                            const horarioJejumField = document.getElementById("horarioJejumField");
+                            if (show) {
+                                horarioJejumField.style.display = "block";
+                            } else {
+                                horarioJejumField.style.display = "none";
+                            }
+                        }
+                    </script>
+
+                    <!-- Sítio Cirúrgico Demarcado -->
+                    <div class="row mt-3">
+                        <div class="col-sm-4">
+                            <label class="form-label form-label-sm">Sítio Cirúrgico demarcado</label>
+                            <div class="d-flex">
+                                <div class="form-check form-check-inline form-check-sm">
+                                    <input class="form-check-input" type="radio" name="sitioCirurgico" id="simSitioCirurgico" value="sim" />
+                                    <label class="form-check-label" for="simSitioCirurgico">Sim</label>
+                                </div>
+                                <div class="form-check form-check-inline form-check-sm">
+                                    <input class="form-check-input" type="radio" name="sitioCirurgico" id="naoSitioCirurgico" value="nao" />
+                                    <label class="form-check-label" for="naoSitioCirurgico">Não</label>
+                                </div>
+                                <div class="form-check form-check-inline form-check-sm">
+                                    <input class="form-check-input" type="radio" name="sitioCirurgico" id="naoAplicaSitioCirurgico" value="naoSeAplica" />
+                                    <label class="form-check-label" for="naoAplicaSitioCirurgico">Não se aplica</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pulseira de Alergia Afixada no Paciente -->
+
+                        <div class="col-sm-6">
+                            <label class="form-label form-label-sm">Pulseira de alergia afixada no paciente</label>
+                            <div class="d-flex">
+                                <div class="form-check form-check-inline form-check-sm">
+                                    <input class="form-check-input" type="radio" name="pulseiraAlergia" id="simPulseiraAlergia" value="sim" />
+                                    <label class="form-check-label" for="simPulseiraAlergia">Sim</label>
+                                </div>
+                                <div class="form-check form-check-inline form-check-sm">
+                                    <input class="form-check-input" type="radio" name="pulseiraAlergia" id="naoPulseiraAlergia" value="nao" />
+                                    <label class="form-check-label" for="naoPulseiraAlergia">Não</label>
+                                </div>
+                                <div class="form-check form-check-inline form-check-sm">
+                                    <input class="form-check-input" type="radio" name="pulseiraAlergia" id="naoAplicaPulseiraAlergia" value="naoSeAplica" />
+                                    <label class="form-check-label" for="naoAplicaPulseiraAlergia">Não se aplica</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Retirados próteses e/ou adornos -->
+                    <div class="row mt-3">
+                        <div class="col-sm-4">
+                            <label class="form-label form-label-sm">Retirados próteses e/ou adornos</label>
+                            <div class="d-flex">
+                                <div class="form-check form-check-inline form-check-sm">
+                                    <input class="form-check-input" type="radio" name="protesesAdornos" id="simProtesesAdornos" value="sim" />
+                                    <label class="form-check-label" for="simProtesesAdornos">Sim</label>
+                                </div>
+                                <div class="form-check form-check-inline form-check-sm">
+                                    <input class="form-check-input" type="radio" name="protesesAdornos" id="naoProtesesAdornos" value="nao" />
+                                    <label class="form-check-label" for="naoProtesesAdornos">Não</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <hr class="mt-3" />
+                    <label class="form-label form-label-sm"><h5>Documentação</h5></label>
+                    <!-- Consentimento Cirúrgico Assinado -->
+                    <div class="row mt-3">
+                        <div class="col-sm-6">
+                            <label class="form-label form-label-sm">Consentimento Cirúrgico assinado</label>
+                            <div class="d-flex">
+                                <div class="form-check form-check-inline form-check-sm">
+                                    <input class="form-check-input" type="radio" name="consentimentoCirurgico" id="simConsentimento" value="sim" />
+                                    <label class="form-check-label" for="simConsentimento">Sim</label>
+                                </div>
+                                <div class="form-check form-check-inline form-check-sm">
+                                    <input class="form-check-input" type="radio" name="consentimentoCirurgico" id="naoConsentimento" value="nao" />
+                                    <label class="form-check-label" for="naoConsentimento">Não</label>
+                                </div>
+                                <div class="form-check form-check-inline form-check-sm">
+                                    <input class="form-check-input" type="radio" name="consentimentoCirurgico" id="naoAplicaConsentimento" value="naoSeAplica" />
+                                    <label class="form-check-label" for="naoAplicaConsentimento">Não se aplica</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Consentimento e Avaliação Anestésica -->
+                        <div class="col-sm-6">
+                            <label class="form-label form-label-sm">Consentimento e avaliação anestésica</label>
+                            <div class="d-flex">
+                                <div class="form-check form-check-inline form-check-sm">
+                                    <input class="form-check-input" type="radio" name="consentimentoAvaliacaoAnestesica" id="simConsentimentoAnestesica" value="sim" />
+                                    <label class="form-check-label" for="simConsentimentoAnestesica">Sim</label>
+                                </div>
+                                <div class="form-check form-check-inline form-check-sm">
+                                    <input class="form-check-input" type="radio" name="consentimentoAvaliacaoAnestesica" id="naoConsentimentoAnestesica" value="nao" />
+                                    <label class="form-check-label" for="naoConsentimentoAnestesica">Não</label>
+                                </div>
+                                <div class="form-check form-check-inline form-check-sm">
+                                    <input class="form-check-input" type="radio" name="consentimentoAvaliacaoAnestesica" id="naoAplicaConsentimentoAnestesica" value="naoSeAplica" />
+                                    <label class="form-check-label" for="naoAplicaConsentimentoAnestesica">Não se aplica</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+
+            <!-- Horário de Saída da Sala Operatória -->
+            <div class="row mt-3">
+                <div class="col-sm-8">
+                    <label class="form-label form-label-sm" for="horarioSaida">Horário de Saída da Sala Operatória</label>
+                    <div class="col-2">
+                        <input type="time" class="form-control form-control-sm" id="horarioSaida" name="horarioSaida" placeholder="Horário" />
+                    </div>
+                </div>
+            </div>
+                <!-- Observação -->
+                <div class="row mt-3">
+                    <div class="col-sm-12">
+                        <label class="form-label form-label-sm">Observação</label>
+                        <textarea class="form-control form-control-sm" rows="5" placeholder="Escreva suas observações aqui"></textarea>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <hr />
+        <section>
+            <div class="container mt-3">
+                <!-- Botão para copiar os valores do formulário para a área de transferência -->
+                <button id="btnCopiar" class="btn btn-success mt-3">Copiar para MV</button>
+                <button id="btnPDF" class="btn btn-info mt-3">Gerar PDF</button>
+                <button id="btnRecarregar" class="btn btn-danger mt-3" onclick="recarregarPagina()">Limpar Formulario</button>
+            </div>
+        </section>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    </body>
+</html>
